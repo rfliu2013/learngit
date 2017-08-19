@@ -18,3 +18,4 @@ git reflog
 git diff
 git diff HEAD -- filename
 git diff HEAD
+git checkout -- filename //discard changes on working directory, back to previous git git commit or git add
