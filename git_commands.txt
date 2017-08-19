@@ -19,3 +19,8 @@ git diff
 git diff HEAD -- filename
 git diff HEAD
 git checkout -- filename //discard changes on working directory, back to previous git git commit or git add
+git reset HEAD filename//unstage adds to the stage
+git rm filename
+git commit -m "remove file"
+git remote add origin git@github.com:rfliu2013/learngit.git
+git push -u origin master
