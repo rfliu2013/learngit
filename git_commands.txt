@@ -1,0 +1,17 @@
+#create repository
+mkdir dirname
+cd dirname
+pwd
+git init  //init dirname as a repository
+
+gvim filename
+git add filename
+git config user.email "email@example.com"
+git commit -m "comments"
+git status
+git diff
+git log
+git log --pretty=oneline
+git reset --hard HEAD^ //BACK to previous commit
+git reset --hard commitid //goto this commit
+git reflog
