@@ -33,3 +33,5 @@ git branch //show current branch
 git checkout master
 git merge dev //on master, merge dev to master branch
 git branch -d dev  //delete dev branch
+git log --graph --pretty=oneline --abbrev-commit
+git merge --no-ff -m "merge with no-ff" dev
