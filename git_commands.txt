@@ -15,3 +15,6 @@ git log --pretty=oneline
 git reset --hard HEAD^ //BACK to previous commit
 git reset --hard commitid //goto this commit
 git reflog
+git diff
+git diff HEAD -- filename
+git diff HEAD
