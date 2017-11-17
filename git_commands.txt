@@ -35,3 +35,22 @@ git merge dev //on master, merge dev to master branch
 git branch -d dev  //delete dev branch
 git log --graph --pretty=oneline --abbrev-commit
 git merge --no-ff -m "merge with no-ff" dev
+
+git config credential.helper 'cache --timeout=7200'
+#首先，创建一个新的Git仓库并且添加一个Git远程仓库sae,地址为：https://git.sinacloud.com/newapp 。
+$ mkdir newapp && cd newapp
+$ git init
+$ git remote add sae https://git.sinacloud.com/newapp
+
+上传代码。如部署Git的主分支（master）的代码到新浪云服务器上的版本1中：
+
+$ touch index.php
+$ git add index.php
+$ git commit -m"initial commit"
+$ git push sae master:1
+
+从新浪云服务器上删除版本1的代码。
+
+$ git push sae :1
+
+
