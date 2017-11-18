@@ -1,0 +1,48 @@
+conda --version
+conda update conda
+conda creeate --name snowflakes biopython  #create a new environment named snowflakes with package biopython in envs directory
+source active snowflakes #activate the new environment
+conda create --help
+conda --help
+conda create --name bunnies python=3.5 astroid babel #This creates a second new environment in /envs named “bunnies”, with Python 3, Astroid and Babel installed.TIP: Install all the programs you will want in this environment at the same time. Installing 1 program at a time can lead to dependency conflicts.
+conda info --envs #display the envs installed
+source activate bunnies #switch to another env
+source deactivate #Change your path from the current environment back to the root:
+conda create --name flowers --clone snowflakes #make a copy of snowflakes
+conda info --envs
+conda remove --name flowers --all #delete the flowers env
+conda search --full-name python #The --full-name option lists only the packages whose full name is exactly “python”. To list all packages whose names contain the text “python”, use conda search python
+
+conda create --name snakes python=3 #To install Python 3 without overwriting your Python 2.7 environment:
+source activate snakes
+conda info --envs
+python --version
+source activate snowflakes
+python --version
+source deactivate
+conda list #To confirm that a package has been added or removed, view a list of packages and versions installed in an environment:View a list of packages available for conda install, sorted by Python version, at http://docs.continuum.io/anaconda/pkg-docs.html
+conda search beautifulsoup4
+conda install --name bunnies beautifulsoup4 #If you don’t specify the name of the environment, as in --name bunnies, conda installs into the current environment.
+source activate bunnies
+conda list
+#For packages that are not available using conda install, look on Anaconda.org, a package management service for both public and private package repositories.
+#see https://conda.io/docs/user-guide/getting-started.html
+#Installing packages from Anaconda.org
+#Installing a package with pip
+
+conda install iopro #iopro is the commercial pkg
+conda remove --name bunnies iopro #To remove the commercial package IOPro from the bunnies environment,
+conda list
+conda remove --name snakes --all
+conda info --envs
+rm -rf ~/anaconda #remove conda
+rm -rf ~/.condarc ~/.conda ~/.continuum
+
+
+echo $PATH  #To see if the conda installation of Python is in your PATH variable:
+which python #To see which Python installation is currently set as the default:
+conda list
+
+#enable tab completion:
+#conda install argcomplete
+
